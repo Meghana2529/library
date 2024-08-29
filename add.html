@@ -1,0 +1,133 @@
+ <html>
+<head>
+<title>buy</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+body
+{
+display:flex;
+justify-content:center;
+align-items:center;
+background:url("p6.jpg")no-repeat;
+background-size:cover;
+}
+   form
+{
+	width:300px;
+	height:300px;
+	justify-content:center;
+	 position:ablosute;
+background:#82492B;
+
+ 
+	margin-top:60px;
+	padding:40px;
+	align-items:center; 
+ 
+	}
+
+td
+{
+ 
+font-size:15px;
+padding:10px;
+color:white;
+}
+
+h1
+	{
+	text-align:center;
+font-family:lucida Fax;
+text-decoration:underline;
+margin-top:-15px;
+margin-left:-60px;
+
+	}
+ 
+td,th
+{
+font-size:20px;
+padding:-10px;
+
+}
+td,input
+{
+height:30px;
+width:200px;
+ 
+}
+ 
+.btn
+{
+height:70px;
+width:90px;
+margin-left:180px;
+border-radius:10px;
+
+}
+.btn:hover
+{
+background:url("p6.jpg")no-repeat;
+}
+label{
+	color:black;
+}
+
+textarea{
+	resize: none;
+}
+</style>
+</head>
+<script>
+ function one(){
+	var add=document.getElementById("title").value.trim();
+	var phone=document.getElementById("author").value.trim();
+	 	var phone=document.getElementById("price").value.trim();
+
+	if(add===""||author===""||price===""){
+		alert("Please fill all the field");
+	}
+	else{
+		alert("your book is Added");
+	}
+}
+</script>
+<body>
+<div class="add">
+
+ 
+
+<form>
+ <h1>ADD YOURS</h1>
+<table>
+	<tr>
+	<td><label>Title:</label></td>
+<td><textarea id="title" placeholder="Enter title"  rows="2" cols="25" ></textarea></td>
+</tr>
+
+<tr>
+<td><label>Author:</label></td>
+<td><input id="author" type="text" placeholder="Enter author" ></td>
+
+</tr>
+
+<tr>
+<td><label>price:</label></td>
+<td><input id="price" type="number" placeholder="Enter number" ></td>
+
+</tr>
+
+ 
+</table>
+
+
+ <button class="btn" onclick="one();">Add</button>
+</form>
+ 
+</div>
+</form>
+</body>
+</html>

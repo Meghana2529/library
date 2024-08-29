@@ -1,0 +1,125 @@
+ <html>
+<head>
+<title>buy</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+body
+{
+display:flex;
+justify-content:center;
+align-items:center;
+background:url("p6.jpg")no-repeat;
+background-size:cover;
+}
+   form
+{
+	width:600px;
+	height:600px;
+	justify-content:center;
+	 position:ablosute;
+background:url("p6.jpg")no-repeat;
+
+ 
+	margin-top:60px;
+	padding:40px;
+	align-items:center; 
+ 
+	}
+
+td
+{
+ 
+font-size:15px;
+padding:10px;
+color:white;
+}
+
+h1
+	{
+	text-align:center;
+font-family:lucida Fax;
+text-decoration:underline;
+margin-top:-15px;
+margin-left:-60px;
+
+	}
+ 
+td,th
+{
+font-size:20px;
+padding:-10px;
+
+}
+td,input
+{
+height:30px;
+width:200px;
+ 
+}
+ 
+.btn
+{
+height:70px;
+width:90px;
+margin-left:180px;
+border-radius:20px;
+}
+label{
+	color:black;
+}
+
+textarea{
+	resize: none;
+}
+</style>
+<script>
+ function one(){
+	var add=document.getElementById("add").value.trim();
+	var phone=document.getElementById("phone").value.trim();
+	var radio1=document.getElementById("pay1").checked;
+	var radio2=document.getElementById("pay2").checked;
+	if(add===""||phone===""||(!radio1 && !radio2)){
+		alert("Please fill all the field");
+	}
+	else{
+		alert("Order Confirmed");
+	}
+}
+ 
+
+  </script>
+</head>
+<body>
+ 
+<div class="login-box">
+
+<form>
+ <h1>Order details</h1>
+<table>
+	<tr>
+	<td><label>Address:</label></td>
+<td><textarea id="add" placeholder="Enter address" rows="3" cols="40 " ></textarea></td>
+</tr>
+
+<tr>
+<td><label>Phone:</label></td>
+<td><input id="phone" type="number" placeholder="Enter number" ></td>
+
+</tr>
+
+<tr>
+<td><label>Order status:</label></td>
+<td><label>cash on delivery </label><input id="pay1" type="radio" id="redio" name="payment"></td>
+<td><label>online payment </label><input id="pay2" type="radio" id="redio" name="payment"></td>
+</tr>
+</table>
+
+
+ <button class="btn" onclick="one();">order</button>
+</form>
+
+</body>
+</html>
